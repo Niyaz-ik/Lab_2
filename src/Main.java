@@ -11,7 +11,7 @@ public class Main {
         Kor.name = "Korovka";
         Kor.price = 67;
         Kor.type = "Milk";
-        Kor.printAll();
-
+        Kor.current = Category.FOOD;
+        Kor.printAll(Kor.current);
     }
 }
