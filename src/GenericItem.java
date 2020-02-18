@@ -54,7 +54,7 @@ public class GenericItem implements Cloneable{
         return true;
     }
 
-    public Object clone() throws CloneNotSupportedException{
+    public Object clone(GenericItem Milk2) throws CloneNotSupportedException{
         return super.clone();
     }
 
@@ -66,6 +66,10 @@ public class GenericItem implements Cloneable{
 class FoodItem extends GenericItem {
     String dateOfIncome; // дата производства
     short expires; //срок годности (суток)
+
+    public Object clone(FoodItem Milk2) throws CloneNotSupportedException{
+        return super.clone();
+    }
 
     void printAll() {
         GetCategory(current);
@@ -91,6 +95,10 @@ class FoodItem extends GenericItem {
 
 class TechnicalItem extends GenericItem {
     short warrantyTime; // гарантийный срок (суток)
+
+    public Object clone(TechnicalItem Milk2) throws CloneNotSupportedException{
+        return super.clone();
+    }
 
     void printAll() {
         GetCategory(current);
