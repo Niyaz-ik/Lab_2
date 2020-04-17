@@ -15,8 +15,29 @@ public class GenericItem implements Cloneable{
     public String name;
     public float price;
     public GenericItem analog;
+    public static int currentID;
 
     public Category current = Category.GENERAL;
+
+    public GenericItem(String name, float price, Category category){
+        //currentID = (int) (Math.random() * 1000);
+        this.ID = GenericItem.currentID++;
+        this.name = name;
+        this.price = price;
+        this.current = category;
+    }
+
+    public GenericItem(String name, float price, GenericItem analog){
+        this.ID = GenericItem.currentID++;
+        this.name = name;
+        this.price = price;
+        this.analog = analog;
+    }
+
+    public GenericItem(){
+        this.ID = GenericItem.currentID++;
+    }
+
 
     public String GetCategory(Category strmain) {
         String str = "";
@@ -51,18 +72,6 @@ public class GenericItem implements Cloneable{
         }
     }
 
-//    public boolean equals (TechnicalItem obj1){
-//        TechnicalItem obj2 = (TechnicalItem) obj1;
-//
-//
-//        if ((this.ID != obj2.ID) || (this.name != obj2.name)
-//                || (this.price != obj2.price) || (this.analog != obj2.analog) || (this.current != obj2.current))
-//            return false;
-//
-//        return true;
-//    }
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -93,6 +102,24 @@ class FoodItem extends GenericItem {
     String dateOfIncome; // дата производства
     short expires; //срок годности (суток)
 
+    public FoodItem(String name,  float price, FoodItem analog, String date, short expires){
+        this.ID = GenericItem.currentID++;
+        this.name = name;
+        this.price = price;
+        this.analog = analog;
+        this.dateOfIncome = date;
+        this.expires = expires;
+    }
+
+    public FoodItem(String name, float price, short expires){
+        this(name, price, null, null, expires);
+    }
+
+    public FoodItem(String name){
+        this(name, 0, null, null, (short) 0);
+    }
+
+
     public Object clone() throws CloneNotSupportedException{
         return super.clone();
     }
@@ -106,18 +133,6 @@ class FoodItem extends GenericItem {
                     ID, name, price, current, dateOfIncome, expires);
         }
     }
-
-//    public boolean equals (FoodItem obj1){
-//        FoodItem obj2 = (FoodItem) obj1;
-//
-//        if ((this.ID != obj2.ID) || (this.name != obj2.name)
-//                || (this.price != obj2.price) || (this.analog != obj2.analog) || (this.current != obj2.current)
-//                || (this.dateOfIncome != obj2.dateOfIncome) || (this.expires != obj2.expires))
-//            return false;
-//
-//        return true;
-//    }
-
 
     @Override
     public boolean equals(Object o) {
@@ -155,18 +170,6 @@ class TechnicalItem extends GenericItem {
                     ID, name, price, current, warrantyTime);
         }
     }
-
-//    public boolean equals (TechnicalItem obj1){
-//        TechnicalItem obj2 = (TechnicalItem) obj1;
-//
-//        if ((this.ID != obj2.ID) || (this.name != obj2.name)
-//                || (this.price != obj2.price) || (this.analog != obj2.analog) || (this.current != obj2.current)
-//                || (this.warrantyTime != obj2.warrantyTime))
-//            return false;
-//
-//        return true;
-//    }
-
 
     @Override
     public boolean equals(Object o) {
