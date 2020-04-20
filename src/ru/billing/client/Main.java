@@ -1,10 +1,14 @@
-import javax.imageio.ImageTranscoder;
+package ru.billing.client;
+
+import ru.billing.client.CatalogLoader;
+import ru.billing.client.CatalogStubLoader;
+import ru.billing.stocklist.*;
 import java.util.Date;
 
 /**
  * @author Niyaz Sayfullin
  * @version 1.0
- * This is the Main class
+ * This is the ru.billing.client.Main class
  */
 
 public class Main {
@@ -181,7 +185,7 @@ public class Main {
             a.name = "Iphone 11 Pro";
             a.price = 99000;
             a.analog = a;
-            a.current = Category.GENERAL;
+            a.current = ru.billing.stocklist.Category.GENERAL;
             a.warrantyTime = 365;
             Product[i] = a;
         }*/

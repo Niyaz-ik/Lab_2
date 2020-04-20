@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2c4f4af-ad1d-40e2-9f70-84b2041eb890" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/fexfu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CatalogLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CatalogStubLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/billing/stocklist/FoodItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/billing/stocklist/TechnicalItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenericItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenericItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemCatalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/U0901Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/U0901Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/U0901WorkArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/U0901WorkArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CatalogLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/billing/client/CatalogLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CatalogStubLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/billing/client/CatalogStubLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/billing/stocklist/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenericItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/billing/stocklist/GenericItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/billing/stocklist/ItemCatalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/billing/client/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="ru.billing.client.Main" />
       <module name="StockListProject" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,25 +100,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1586981693364" />
-    <state width="1342" height="129" key="GridCell.Tab.0.bottom" timestamp="1587339535270">
+    <state width="723" height="129" key="GridCell.Tab.0.bottom" timestamp="1587376549881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="129" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587339535270" />
+    <state width="723" height="129" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587376549881" />
     <state width="1071" height="268" key="GridCell.Tab.0.bottom/0.0.2234.1216@0.0.2234.1216" timestamp="1582060257799" />
-    <state width="1342" height="129" key="GridCell.Tab.0.center" timestamp="1587339535270">
+    <state width="723" height="129" key="GridCell.Tab.0.center" timestamp="1587376549881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="129" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587339535270" />
+    <state width="723" height="129" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587376549881" />
     <state width="1071" height="268" key="GridCell.Tab.0.center/0.0.2234.1216@0.0.2234.1216" timestamp="1582060257799" />
-    <state width="1342" height="129" key="GridCell.Tab.0.left" timestamp="1587339535270">
+    <state width="723" height="129" key="GridCell.Tab.0.left" timestamp="1587376549880">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="129" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587339535270" />
+    <state width="723" height="129" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587376549880" />
     <state width="1071" height="268" key="GridCell.Tab.0.left/0.0.2234.1216@0.0.2234.1216" timestamp="1582060257799" />
-    <state width="1342" height="129" key="GridCell.Tab.0.right" timestamp="1587339535270">
+    <state width="723" height="129" key="GridCell.Tab.0.right" timestamp="1587376549881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="129" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587339535270" />
+    <state width="723" height="129" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587376549881" />
     <state width="1071" height="268" key="GridCell.Tab.0.right/0.0.2234.1216@0.0.2234.1216" timestamp="1582060257799" />
     <state width="1071" height="417" key="GridCell.Tab.1.bottom" timestamp="1582049986793">
       <screen x="0" y="0" width="2234" height="1216" />

@@ -1,3 +1,7 @@
+package ru.billing.stocklist;
+
+import ru.billing.stocklist.GenericItem;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
