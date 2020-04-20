@@ -6,7 +6,7 @@ public class ItemCatalog {
     private ArrayList<GenericItem> ALCatalog = new ArrayList<GenericItem>();
 
     public void addItem(GenericItem item) {
-        catalog.put(item.ID, item); // Добавляем товар в HashMap
+        catalog.put(item.getID(), item); // Добавляем товар в HashMap
         ALCatalog.add(item); // Добавляем тот же товар в ArrayList
     }
 
@@ -26,10 +26,8 @@ public class ItemCatalog {
 
     public GenericItem findItemByIDAL(int id){
         for(GenericItem i : ALCatalog){
-            if(i.ID==id) return i;
+            if(i.getID()==id) return i;
         }
         return null;
     }
-
-
 }

@@ -9,8 +9,9 @@ public class U0901WorkArray <T extends Number>  {
     public double sum(){
         double doubleWork = 0;
         T sum = null;
-        for (T i : arrNums)
-            doubleWork += (double) i;
+        for (T i : arrNums) {
+            doubleWork += i.doubleValue();
+        }
         return doubleWork;
     }
 }

@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2c4f4af-ad1d-40e2-9f70-84b2041eb890" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ItemCatalog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/U0901Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/U0901WorkArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/fexfu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CatalogLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CatalogStubLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GenericItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenericItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemCatalog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/U0901Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/U0901Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/U0901WorkArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/U0901WorkArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -39,10 +42,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Application.U0901Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="StockListProject" />
@@ -81,9 +86,10 @@
       <screen x="0" y="0" width="2234" height="1216" />
     </state>
     <state x="1129" y="263" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2234.1216@0.0.2234.1216" timestamp="1581952971172" />
-    <state x="1480" y="321" key="#com.intellij.ide.util.MemberChooser" timestamp="1582059361521">
-      <screen x="0" y="0" width="2234" height="1216" />
+    <state x="1018" y="193" key="#com.intellij.ide.util.MemberChooser" timestamp="1587374212806">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="1018" y="193" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587374212806" />
     <state x="1480" y="321" key="#com.intellij.ide.util.MemberChooser/0.0.2234.1216@0.0.2234.1216" timestamp="1582059361521" />
     <state x="1404" y="392" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581952291901">
       <screen x="0" y="0" width="2234" height="1216" />
@@ -93,25 +99,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1586981693364" />
-    <state width="825" height="129" key="GridCell.Tab.0.bottom" timestamp="1587157469701">
+    <state width="1342" height="129" key="GridCell.Tab.0.bottom" timestamp="1587339535270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="825" height="129" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587157469701" />
+    <state width="1342" height="129" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587339535270" />
     <state width="1071" height="268" key="GridCell.Tab.0.bottom/0.0.2234.1216@0.0.2234.1216" timestamp="1582060257799" />
-    <state width="825" height="129" key="GridCell.Tab.0.center" timestamp="1587157469701">
+    <state width="1342" height="129" key="GridCell.Tab.0.center" timestamp="1587339535270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="825" height="129" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587157469701" />
+    <state width="1342" height="129" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587339535270" />
     <state width="1071" height="268" key="GridCell.Tab.0.center/0.0.2234.1216@0.0.2234.1216" timestamp="1582060257799" />
-    <state width="825" height="129" key="GridCell.Tab.0.left" timestamp="1587157469701">
+    <state width="1342" height="129" key="GridCell.Tab.0.left" timestamp="1587339535270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="825" height="129" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587157469701" />
+    <state width="1342" height="129" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587339535270" />
     <state width="1071" height="268" key="GridCell.Tab.0.left/0.0.2234.1216@0.0.2234.1216" timestamp="1582060257799" />
-    <state width="825" height="129" key="GridCell.Tab.0.right" timestamp="1587157469701">
+    <state width="1342" height="129" key="GridCell.Tab.0.right" timestamp="1587339535270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="825" height="129" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587157469701" />
+    <state width="1342" height="129" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587339535270" />
     <state width="1071" height="268" key="GridCell.Tab.0.right/0.0.2234.1216@0.0.2234.1216" timestamp="1582060257799" />
     <state width="1071" height="417" key="GridCell.Tab.1.bottom" timestamp="1582049986793">
       <screen x="0" y="0" width="2234" height="1216" />
@@ -139,13 +145,18 @@
     </state>
     <state x="930" y="293" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587116658795" />
     <state x="1374" y="432" key="com.intellij.ide.util.TipDialog/0.0.2234.1216@0.0.2234.1216" timestamp="1582045709652" />
+    <state x="207" y="222" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587158701803">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="207" y="222" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1587158701803" />
     <state x="1254" y="344" width="842" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581983927196">
       <screen x="0" y="0" width="2234" height="1216" />
     </state>
     <state x="1254" y="344" width="842" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2234.1216@0.0.2234.1216" timestamp="1581983927196" />
-    <state x="1123" y="232" key="new project wizard" timestamp="1581953465780">
-      <screen x="0" y="0" width="2234" height="1216" />
+    <state x="418" y="66" key="new project wizard" timestamp="1587375712035">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="418" y="66" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1587375712035" />
     <state x="1123" y="232" key="new project wizard/0.0.2234.1216@0.0.2234.1216" timestamp="1581953465780" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1587155580304">
       <screen x="0" y="0" width="1536" height="824" />

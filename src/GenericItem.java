@@ -11,13 +11,62 @@ public class GenericItem implements Cloneable{
      * @param price - price of the product
      * @param analog - analog of product
      */
-    public int ID;
-    public String name;
-    public float price;
-    public GenericItem analog;
-    public static int currentID;
+    private int ID;
+    private String name;
+    private float price;
+    private GenericItem analog;
+    protected static int currentID;
 
-    public Category current = Category.GENERAL;
+    private Category current = Category.GENERAL;
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public GenericItem getAnalog() {
+        return analog;
+    }
+
+    public void setAnalog(GenericItem analog) {
+        this.analog = analog;
+    }
+
+    public static int getCurrentID() {
+        currentID++;
+        return currentID;
+    }
+
+    public static void setCurrentID(int currentID) {
+        GenericItem.currentID = currentID;
+    }
+
+    public Category getCurrent() {
+        return current;
+    }
+
+    public void setCurrent(Category current) {
+        this.current = current;
+    }
 
     public GenericItem(String name, float price, Category category){
         //currentID = (int) (Math.random() * 1000);
@@ -103,10 +152,10 @@ class FoodItem extends GenericItem {
     short expires; //срок годности (суток)
 
     public FoodItem(String name,  float price, FoodItem analog, String date, short expires){
-        this.ID = GenericItem.currentID++;
-        this.name = name;
-        this.price = price;
-        this.analog = analog;
+        setID(GenericItem.getCurrentID());
+        setName(name);
+        setPrice(price);
+        setAnalog(analog);
         this.dateOfIncome = date;
         this.expires = expires;
     }
@@ -119,18 +168,17 @@ class FoodItem extends GenericItem {
         this(name, 0, null, null, (short) 0);
     }
 
-
     public Object clone() throws CloneNotSupportedException{
         return super.clone();
     }
 
     void printAll() {
-        GetCategory(current);
-        if (!(analog == null)){
+        GetCategory(getCurrent());
+        if (!(getAnalog() == null)){
         System.out.printf("ID: %d, Name: %s, price: %5.2f, analog: %s, current: %s, data: %s, expires (day): %d\n",
-                ID, name, price, analog.name, current, dateOfIncome, expires); } else {
+                getID(), getName(), getPrice(), getAnalog().getName(), getCurrent(), dateOfIncome, expires); } else {
             System.out.printf("ID: %d, Name: %s, price: %5.2f, analog: no, current: %s, data: %s, expires (day): %d\n",
-                    ID, name, price, current, dateOfIncome, expires);
+                    getID(), getName(), getPrice(), getCurrent(), dateOfIncome, expires);
         }
     }
 
@@ -150,7 +198,7 @@ class FoodItem extends GenericItem {
     }
 
     public String toString() {
-        return getClass().getName() + "@" + this.ID + this.name + this.price + this.current + this.dateOfIncome + this.expires;
+        return getClass().getName() + "@" + this.getID() + this.getName() + this.getPrice() + this.getCurrent() + this.dateOfIncome + this.expires;
     }
 }
 
@@ -162,12 +210,12 @@ class TechnicalItem extends GenericItem {
     }
 
     void printAll() {
-        GetCategory(current);
-        if (!(analog == null)){
+        GetCategory(getCurrent());
+        if (!(getAnalog() == null)){
             System.out.printf("ID: %d, Name: %s, price: %5.2f, analog: %s, current: %s, warrantyTime: %d\n",
-                    ID, name, price, analog.name, current, warrantyTime); } else {
+                    getID(), getName(), getPrice(), getAnalog().getName(), getCurrent(), warrantyTime); } else {
             System.out.printf("ID: %d, Name: %s, price: %5.2f, analog: no, current: %s, warrantyTime: %d\n",
-                    ID, name, price, current, warrantyTime);
+                    getID(), getName(), getPrice(), getCurrent(), warrantyTime);
         }
     }
 
@@ -186,7 +234,7 @@ class TechnicalItem extends GenericItem {
     }
 
     public String toString() {
-        return getClass().getName() + "@" + this.ID + this.name + this.price + this.current + this.warrantyTime;
+        return getClass().getName() + "@" + this.getID() + this.getName() + this.getPrice() + this.getCurrent() + this.warrantyTime;
     }
 
 }

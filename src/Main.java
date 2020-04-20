@@ -9,20 +9,13 @@ import java.util.Date;
 
 public class Main {
     public static void main (String[] args){
-        GenericItem Jacket1 = new GenericItem();
-        Jacket1.name = "Jacket-MWC";
-        Jacket1.price = 3000;
-        Jacket1.analog = null;
-        Jacket1.current = Category.DRESS;
+        GenericItem Jacket1 = new GenericItem("Jacket-MWC", 3000, Category.DRESS);
         Jacket1.printAll();
         System.out.println(Jacket1.toString());
         System.out.println("");
 
-        GenericItem Jacket = new GenericItem();
-        Jacket.name = "Jacket-MWC";
-        Jacket.price = 3000;
-        Jacket.analog = Jacket1;
-        Jacket.current = Category.DRESS;
+        GenericItem Jacket = new GenericItem("Jacket-MWC", 3000, Category.DRESS);
+        Jacket.setAnalog(Jacket1);
         Jacket.printAll();
         System.out.println(Jacket.toString());
         System.out.println("");
@@ -31,9 +24,9 @@ public class Main {
 
         System.out.println("");
         FoodItem Milk1 = new FoodItem("Korovka", 67, null, "10.04.2019", (short) 7);
-        Milk1.current = Category.FOOD;
+        Milk1.setCurrent(Category.FOOD);
         FoodItem Milk2 = new FoodItem("Prostokvashino", 70, Milk1, "10.04.2020", (short) 7);
-        Milk2.current = Category.FOOD;
+        Milk2.setCurrent(Category.FOOD);
 
         CheckEqualObjects(Milk1, Milk2); //Сравнивает два молочных объекта
         System.out.println("");
@@ -43,7 +36,7 @@ public class Main {
 
         System.out.println("");
         FoodItem Milk4 = new FoodItem("Prostokvashino", 70, Milk1, "10.04.2020", (short) 7);
-        Milk4.current = Category.FOOD;
+        Milk4.setCurrent(Category.FOOD);
 
         // У нас есть объект Milk4, мы находим схожий с ним объект по analog в массиве Product[]
         // и клонируем этот элемент массива в отдельный экземпляр под названием Milk5
@@ -63,7 +56,15 @@ public class Main {
         Hleb1.printAll();
         GenericItem Hleb2 = new GenericItem("Domashniy", 50, Category.FOOD);
         Hleb2.printAll();
+        System.out.println();
 
+        String line = "Конфеты ’Маска’;45;120";
+        String[] item_fld = line.split(";");
+        double item_fld_price = Double.parseDouble(item_fld[1]);
+
+        FoodItem konfeti = new FoodItem(item_fld[0], Float.parseFloat(item_fld[1]), Short.parseShort(item_fld[2]));
+        konfeti.printAll();
+        System.out.println();
 
         /* This is where the Lab 4 story begins. */
         ItemCatalog ProductsItemCatalog = new ItemCatalog();
@@ -89,16 +90,18 @@ public class Main {
         end = new Date().getTime();
         System.out.println("In ArrayList: "+(end-begin));
 
+        CatalogLoader loader = new CatalogStubLoader();
+        loader.load(ProductsItemCatalog);
+        ProductsItemCatalog.printItems();
+
     }
-
-
 
 
 
     public static GenericItem GetClone(GenericItem Obj2){
         GenericItem Obj1 = null;
         try {
-            Obj1 = (GenericItem) Obj2.analog.clone();
+            Obj1 = (GenericItem) Obj2.getAnalog().clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
@@ -109,8 +112,8 @@ public class Main {
     public static FoodItem GetClone(FoodItem Obj2){
         FoodItem Obj1 = null;
         try {
-            Obj1 = (FoodItem) Obj2.analog.clone();
-            Obj1.analog = (FoodItem) Obj2.clone();
+            Obj1 = (FoodItem) Obj2.getAnalog().clone();
+            Obj1.setAnalog((FoodItem) Obj2.clone());
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
@@ -121,7 +124,7 @@ public class Main {
     public static TechnicalItem GetClone(TechnicalItem Obj2){
         TechnicalItem Obj1 = null;
         try {
-            Obj1 = (TechnicalItem) Obj2.analog.clone();
+            Obj1 = (TechnicalItem) Obj2.getAnalog().clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
@@ -139,25 +142,25 @@ public class Main {
 
     public static void CheckEqualObjects(GenericItem Obj1, GenericItem Obj2){
         if (Obj1.equals(Obj2)){
-            System.out.println("Products " + Obj1.name+ " and " + Obj2.name + " are equal");
+            System.out.println("Products " + Obj1.getName()+ " and " + Obj2.getName() + " are equal");
         } else {
-            System.out.println("Products " + Obj1.name+ " and " + Obj2.name + " are not equal");
+            System.out.println("Products " + Obj1.getName()+ " and " + Obj2.getName() + " are not equal");
         }
     }
 
     public static void CheckEqualObjects(FoodItem Obj1, FoodItem Obj2){
         if (Obj1.equals(Obj2)){
-            System.out.println("Products " + Obj1.name+ " and " + Obj2.name + " are equal");
+            System.out.println("Products " + Obj1.getName()+ " and " + Obj2.getName() + " are equal");
         } else {
-            System.out.println("Products " + Obj1.name+ " and " + Obj2.name + " are not equal");
+            System.out.println("Products " + Obj1.getName()+ " and " + Obj2.getName() + " are not equal");
         }
     }
 
     public static void CheckEqualObjects(TechnicalItem Obj1, TechnicalItem Obj2){
         if (Obj1.equals(Obj2)){
-            System.out.println("Products " + Obj1.name+ " and " + Obj2.name + " are equal");
+            System.out.println("Products " + Obj1.getName()+ " and " + Obj2.getName() + " are equal");
         } else {
-            System.out.println("Products " + Obj1.name+ " and " + Obj2.name + " are not equal");
+            System.out.println("Products " + Obj1.getName()+ " and " + Obj2.getName() + " are not equal");
         }
     }
 
@@ -166,8 +169,8 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             FoodItem a = new FoodItem("Korovka " + i + " poryadka", 70, null, "10.04.2020", (short) 7);
             if (i != 0) {
-                a.analog = Product[i-1];
-                a.current = Category.FOOD;
+                a.setAnalog(Product[i-1]);
+                a.setCurrent(Category.FOOD);
             }
             Product[i] = a;
         }
